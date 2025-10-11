@@ -1,0 +1,60 @@
+{
+  "name": "safequest",
+  "version": "1.0.0",
+  "description": "An AI-powered interactive storytelling platform designed to teach children important life values through engaging, personalized adventures with TTS narration and dynamic character interactions.",
+  "main": "index.js",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sathvik5647/Safequest.git"
+  },
+  "homepage": "https://github.com/Sathvik5647/Safequest#readme",
+  "bugs": {
+    "url": "https://github.com/Sathvik5647/Safequest/issues"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start --prefix backend\" \"npm run start --prefix frontend\"",
+    "dev": "npm run start",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "test": "npm run test --prefix backend && npm run test --prefix frontend",
+    "test:backend": "npm run test --prefix backend",
+    "test:frontend": "npm run test --prefix frontend",
+    "clean": "npm run clean --prefix backend && npm run clean --prefix frontend",
+    "setup": "npm run install:all && npm run setup:env",
+    "setup:env": "cp backend/.env.example backend/.env || copy backend\\.env.example backend\\.env",
+    "lint": "npm run lint --prefix frontend",
+    "tts": "cd tts-service && python app.py"
+  },
+  "keywords": [
+    "ai-storytelling",
+    "educational-games",
+    "children-safety",
+    "interactive-stories",
+    "text-to-speech",
+    "character-based-learning",
+    "mern-stack",
+    "react",
+    "express",
+    "mongodb",
+    "nodejs",
+    "groq-ai",
+    "tts",
+    "framer-motion"
+  ],
+  "author": "SafeQuest Team",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "dependencies": {
+    "@react-spring/web": "^10.0.3",
+    "framer-motion": "^12.23.22",
+    "node-fetch": "^3.3.2",
+    "react-use-measure": "^2.1.7"
+  }
+}
